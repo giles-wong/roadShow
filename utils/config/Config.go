@@ -11,9 +11,10 @@ import (
 )
 
 type Config struct {
-	App      App      `yaml:"app"`
-	Log      Log      `yaml:"log"`
-	DbConfig DbConfig `yaml:"dbconf"`
+	App       App       `yaml:"app"`
+	Log       Log       `yaml:"log"`
+	DbConfig  DbConfig  `yaml:"dbconf"`
+	Signature Signature `yaml:"signature"`
 }
 
 // InitConfig 读取yaml配置文件，转换为Config结构体 初始化配置文件

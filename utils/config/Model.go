@@ -47,3 +47,10 @@ type Log struct {
 	MaxAge     int    `mapstructure:"max_age" json:"max_age" yaml:"max_age"`    // day
 	Compress   bool   `mapstructure:"compress" json:"compress" yaml:"compress"`
 }
+
+// Signature 验签使用的密钥
+type Signature struct {
+	AdminApi string `yaml:"adminPc"`
+	UserApi  string `yaml:"userPc"`
+	NoToken  string `yaml:"noToken"`
+}
