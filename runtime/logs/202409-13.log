@@ -1,0 +1,7 @@
+{"level":"dev.info","ts":"[2024-09-13 10:06:22.304]","caller":"roadShow/main.go:13","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-13 10:41:44.983]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-13 10:41:44.983]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-13 11:57:47.229]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-13 11:57:47.229]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-13 11:58:04.179]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-13 11:58:04.180]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
