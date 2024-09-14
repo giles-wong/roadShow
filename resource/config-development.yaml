@@ -8,6 +8,12 @@ dbconf:
   prefix: #数据表前缀
   sqlmode: "NO_ENGINE_SUBSTITUTION" #设置数据库sql_mode，当数据库类型mariadb/mysql可设置，不设置留空
 
+redis:
+  addr: 127.0.0.1:6379 # 链接地址
+  password: "" # 密码
+  db: 2 # 数据库索引
+
+
 log:
   level: info  # 日志等级debug
   root_dir: ./runtime/logs # 日志根目录
@@ -39,7 +45,7 @@ app:
   #不需要接口合法性-具体请求路径
   noVerifyAPI: /wxoffi/service/getPost_api,/common/install/index,/common/install/save,
 
-signature:
-  adminPc: OHNNR2APTM7DQG8WTDBIYCBS6EX0EUZQ #管理端-PC接口
-  userPc: 6ICRYZRLDS98DN7E0YQ4AWBHLKPMUFIB #用户端-PC接口
-  noToken: passport.login.index,
+sign:
+  admin: OHNNR2APTM7DQG8WTDBIYCBS6EX0EUZQ #管理端-PC接口
+  user: 6ICRYZRLDS98DN7E0YQ4AWBHLKPMUFIB #用户端-PC接口
+  noToken: passport.login.index,subject.subject.referrer

@@ -9,9 +9,9 @@ func GetAppSecret(appKey string) (string, error) {
 
 	switch appKey {
 	case "admin-pc":
-		return global.App.Config.Signature.AdminApi, nil
+		return global.App.Config.SignConf.Admin, nil
 	case "user-pc":
-		return global.App.Config.Signature.UserApi, nil
+		return global.App.Config.SignConf.User, nil
 	default:
 		return "", errors.New("appKey not found")
 	}

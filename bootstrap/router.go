@@ -11,5 +11,5 @@ func RunServer() {
 	//加载路由
 	r := router.InitRouter()
 	fmt.Println("router:", r.Routes())
-	r.Run(":" + global.App.Config.App.Port)
+	r.Run(":" + global.App.Config.AppConf.Port)
 }

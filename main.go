@@ -16,7 +16,8 @@ func main() {
 	global.App.Log.Info("starting server ... ok")
 
 	// 加载应用配置
-	setCpu, _ := strconv.Atoi(global.App.Config.App.CPUnum)
+	setCpu, _ := strconv.Atoi(global.App.Config.AppConf.CpuNum)
+	fmt.Println("setCpu", setCpu)
 	machineCpu := runtime.NumCPU()
 	if setCpu > machineCpu { // 如果配置cpu核数大于当前计算机核数，则等当前计算机核数
 		setCpu = machineCpu

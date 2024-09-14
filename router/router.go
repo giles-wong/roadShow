@@ -28,13 +28,13 @@ func InitRouter() *gin.Engine {
 	})
 
 	//控制台日志级别
-	gin.SetMode(global.App.Config.App.RunlogType)
+	gin.SetMode(global.App.Config.AppConf.RunLogType)
 	// 为 multipart forms 设置较低的内存限制 (默认是 32 MiB)
 	r.MaxMultipartMemory = 8 << 20 // 8 MiB
 	//跨域访问-注意跨域要放在gin.Default下
 	var strArr []string
-	if global.App.Config.App.Allowurl != "" {
-		strArr = strings.Split(global.App.Config.App.Allowurl, `,`)
+	if global.App.Config.AppConf.AllowURL != "" {
+		strArr = strings.Split(global.App.Config.AppConf.AllowURL, `,`)
 	} else {
 		strArr = []string{"http://localhost:8080"}
 	}
@@ -51,6 +51,8 @@ func InitRouter() *gin.Engine {
 	r.Use(middleware.ValidityAPi())
 	// 第二步 签名校验
 	r.Use(middleware.Signature())
+	// 第三步 验证签名
+	r.Use(middleware.ValidityToken())
 
 	r.NoRoute(func(c *gin.Context) {
 		fmt.Println(112, c.Request.URL.Path)

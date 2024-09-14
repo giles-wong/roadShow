@@ -33,16 +33,5 @@ func ValidityAPi() gin.HandlerFunc {
 			context.Abort()
 			return
 		}
-
-		//// token 验证
-		//conf := strings.Split(global.App.Config.Signature.NoToken, ",")
-		//
-		//fmt.Println(conf)
-		//fmt.Println(params["method"])
-		//if !contains(conf, params["method"].(string)) && params["token"] == nil {
-		//	response.Error(context, 400, "token验证失败01")
-		//	context.Abort()
-		//	return
-		//}
 	}
 }

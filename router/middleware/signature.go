@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/giles-wong/roadShow/library/response"
 	"github.com/giles-wong/roadShow/utils/tools"
 	"github.com/gin-gonic/gin"
 	"sort"
@@ -63,110 +64,28 @@ func Signature() gin.HandlerFunc {
 		}
 		appKey := params["app_key"].(string)
 		appSecret, _ := tools.GetAppSecret(appKey)
-		checkSign := md5.Sum([]byte(fmt.Sprintf("%s%s%s", appSecret, stringToBeSigned.String(), appSecret)))
-		checkSignStr := fmt.Sprintf("%X", checkSign)
-		fmt.Println(stringToBeSigned.String())
-		fmt.Println(checkSignStr)
-		fmt.Println(signature)
 
-		//timestamp, _ := params["timestamp"].(float64)
-		//// 假设时间戳是以毫秒为单位
-		//tsInt64 := int64(timestamp)
-		//t := time.UnixMilli(tsInt64).UTC().UnixMilli()
-		//params["timestamp"] = t
-		//
-		//// 获取签名
-		//signature, ok := params["sign"].(string)
-		//if !ok {
-		//	context.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "缺少签名参数"})
-		//	return
-		//}
-		//// 删除签名参数
-		//delete(params, "sign")
-		//// 构建待签名字符串
-		//stringToBeSigned := buildStringToBeSigned(params)
-		//appKey := params["app_key"].(string)
-		//appSecret, _ := tools.GetAppSecret(appKey)
-		//// 生成签名
-		//checkSign := generateSignature(stringToBeSigned, appSecret)
-		//
-		//fmt.Println(checkSign)
-		//fmt.Println(signature)
-		//
-		//// 验证签名
-		//if strings.Compare(strings.ToUpper(checkSign), strings.ToUpper(signature)) != 0 {
-		//	response.Error(context, 4004, "签名错误")
-		//	return
-		//}
+		input := fmt.Sprintf("%s%s%s", appSecret, stringToBeSigned.String(), appSecret)
+		// 创建一个新的 MD5 计算器
+		hasher := md5.New()
+		_, err := hasher.Write([]byte(input))
+		if err != nil {
+			response.Error(context, 4006, "签名错误")
+		}
+		// 获取计算后的散列值
+		hashBytes := hasher.Sum(nil)
+		// 将字节切片转换为十六进制格式的字符串
+		checkSign := hex.EncodeToString(hashBytes)
 
-		// 如果签名正确，则继续处理请求
+		if strings.Compare(strings.ToUpper(checkSign), strings.ToUpper(signature)) != 0 {
+			response.Error(context, 4008, "签名错误02")
+			return
+		}
+
 		context.Next()
 	}
 }
 
 func stripslashes(s string) string {
 	return strings.ReplaceAll(strings.ReplaceAll(s, `\"`, "\""), `\\`, `\`)
-}
-
-// 构建签名字符串
-func buildStringToBeSigned(params map[string]interface{}) string {
-	fmt.Println(params)
-	var buffer strings.Builder
-	keys := make([]string, 0, len(params))
-
-	for k := range params {
-		keys = append(keys, k)
-	}
-
-	sort.Strings(keys)
-
-	for _, k := range keys {
-		v := params[k]
-		var vStr string
-		if isJsonArray(v) {
-			jsonStr, _ := json.Marshal(v)
-			vStr = string(jsonStr)
-		} else if v == true || v == false {
-			vStr = boolToString(v.(bool))
-		} else {
-			if v == "" {
-				vStr = ""
-			} else {
-				vStr = v.(string)
-			}
-		}
-		buffer.WriteString(fmt.Sprintf("%s%s", k, vStr))
-	}
-
-	return buffer.String()
-}
-
-// generateSignature 生成签名
-func generateSignature(data, appSecret string) string {
-	fmt.Println(data)
-	fmt.Println(appSecret)
-	h := md5.New()
-	h.Write([]byte(appSecret + data + appSecret))
-	return hex.EncodeToString(h.Sum(nil))
-}
-
-// boolToString 转换布尔值为字符串
-func boolToString(b bool) string {
-	if b {
-		return "true"
-	}
-	return "false"
-}
-
-// isJsonArray 检查值是否为JSON数组
-func isJsonArray(val interface{}) bool {
-	if val == nil {
-		return false
-	}
-	switch val.(type) {
-	case []interface{}:
-		return true
-	default:
-		return false
-	}
 }

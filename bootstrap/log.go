@@ -21,7 +21,7 @@ func InitLog() *zap.Logger {
 	// 设置日志等级
 	setLogLevel()
 
-	if global.App.Config.Log.ShowLine {
+	if global.App.Config.LogConf.ShowLine {
 		option = append(option, zap.AddCaller())
 	}
 
@@ -31,13 +31,13 @@ func InitLog() *zap.Logger {
 
 // 判断文件夹是否存在
 func createRootDir() {
-	if ok, _ := tools.PathExists(global.App.Config.Log.RootDir); !ok {
-		_ = os.MkdirAll(global.App.Config.Log.RootDir, os.ModePerm)
+	if ok, _ := tools.PathExists(global.App.Config.LogConf.RootDir); !ok {
+		_ = os.MkdirAll(global.App.Config.LogConf.RootDir, os.ModePerm)
 	}
 }
 
 func setLogLevel() {
-	switch global.App.Config.Log.Level {
+	switch global.App.Config.LogConf.Level {
 	case "debug":
 		level = zap.DebugLevel
 		option = append(option, zap.AddStacktrace(level))
@@ -68,11 +68,11 @@ func getZapCore() zapcore.Core {
 		encoder.AppendString(time.Format("[" + "2006-01-02 15:04:05.000" + "]"))
 	}
 	encoderConfig.EncodeLevel = func(l zapcore.Level, encoder zapcore.PrimitiveArrayEncoder) {
-		encoder.AppendString(global.App.Config.App.Env + "." + l.String())
+		encoder.AppendString(global.App.Config.AppConf.Env + "." + l.String())
 	}
 
 	// 设置编码器
-	if global.App.Config.Log.Format == "json" {
+	if global.App.Config.LogConf.Format == "json" {
 		encoder = zapcore.NewJSONEncoder(encoderConfig)
 	} else {
 		encoder = zapcore.NewConsoleEncoder(encoderConfig)
@@ -85,11 +85,11 @@ func getZapCore() zapcore.Core {
 func getLogWriter() zapcore.WriteSyncer {
 	timeStr := time.Now().Format("200601-02")
 	file := &lumberjack.Logger{
-		Filename:   global.App.Config.Log.RootDir + "/" + timeStr + ".log",
-		MaxSize:    global.App.Config.Log.MaxSize,
-		MaxBackups: global.App.Config.Log.MaxBackups,
-		MaxAge:     global.App.Config.Log.MaxAge,
-		Compress:   global.App.Config.Log.Compress,
+		Filename:   global.App.Config.LogConf.RootDir + "/" + timeStr + ".log",
+		MaxSize:    global.App.Config.LogConf.MaxSize,
+		MaxBackups: global.App.Config.LogConf.MaxBackups,
+		MaxAge:     global.App.Config.LogConf.MaxAge,
+		Compress:   global.App.Config.LogConf.Compress,
 	}
 
 	return zapcore.AddSync(file)
