@@ -19,7 +19,7 @@ func ValidityToken() gin.HandlerFunc {
 		if noTokenConf.SliceContains(params["method"].(string)) == false {
 			token := params["token"]
 			//去 redis 中查询用户信息 验证token 是否有效 TODO
-			fmt.Println(token)
+			fmt.Println("token", token)
 		}
 
 		context.Next()

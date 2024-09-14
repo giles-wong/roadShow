@@ -86,3 +86,9 @@
 {"level":"dev.info","ts":"[2024-09-14 15:02:22.549]","caller":"roadShow/main.go:28","msg":"当前计算机核数: 8个,调用：3个"}
 {"level":"dev.info","ts":"[2024-09-14 15:02:53.757]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
 {"level":"dev.info","ts":"[2024-09-14 15:02:53.757]","caller":"roadShow/main.go:28","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 15:40:45.628]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 15:40:45.629]","caller":"roadShow/main.go:28","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 15:44:20.500]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 15:44:20.501]","caller":"roadShow/main.go:28","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 15:48:25.614]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 15:48:25.614]","caller":"roadShow/main.go:28","msg":"当前计算机核数: 8个,调用：3个"}

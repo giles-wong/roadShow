@@ -18,7 +18,8 @@ func ValidityAPi() gin.HandlerFunc {
 			context.Abort()
 			return
 		}
-
+		// 将请求参数放到上下文中
+		context.Set("params", params)
 		for _, v := range checkParams {
 			if params[v] == nil || params[v] == "" {
 				response.Error(context, 4002, "缺少必要参数:"+v)

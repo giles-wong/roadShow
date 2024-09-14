@@ -2,8 +2,7 @@ package router
 
 import (
 	"fmt"
-	"github.com/giles-wong/roadShow/app/admin"
-	"github.com/giles-wong/roadShow/app/user"
+	"github.com/giles-wong/roadShow/app/controller"
 	"github.com/giles-wong/roadShow/global"
 	"github.com/giles-wong/roadShow/library/response"
 	"github.com/giles-wong/roadShow/router/middleware"
@@ -61,8 +60,7 @@ func InitRouter() *gin.Engine {
 		response.Error(c, 404, "请求的接口不存在, 请确认")
 	})
 
-	r.POST("/admin", admin.HandleAdmin)
-	r.POST("/user", user.HandleAdmin)
+	r.POST("/admin", controller.HandleAdmin)
 
 	return r
 }
