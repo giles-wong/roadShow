@@ -1,0 +1,58 @@
+{"level":"dev.info","ts":"[2024-09-14 09:40:54.494]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 09:40:54.494]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:18:02.633]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:18:02.633]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:23:54.202]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:23:54.202]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:30:04.725]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:30:04.725]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:30:48.544]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:30:48.545]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:33:07.866]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:33:07.867]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:34:10.982]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:34:10.982]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:35:43.304]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:35:43.304]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:36:36.892]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:36:36.892]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:37:27.280]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:37:27.280]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:41:34.354]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:41:34.354]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:41:49.355]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:41:49.355]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:42:36.436]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:42:36.436]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:43:22.113]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:43:22.113]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:45:01.136]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:45:01.136]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:45:54.104]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:45:54.105]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:46:31.251]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:46:31.252]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:47:05.006]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:47:05.006]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:48:10.918]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:48:10.918]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:55:33.897]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:55:33.897]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:56:29.108]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:56:29.108]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 10:57:52.667]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 10:57:52.667]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:14:24.923]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:14:24.923]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:15:06.639]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:15:06.640]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:17:11.553]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:17:11.553]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:21:24.751]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:21:24.752]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:29:37.076]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:29:37.076]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:33:49.687]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:33:49.688]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}
+{"level":"dev.info","ts":"[2024-09-14 11:35:59.291]","caller":"roadShow/main.go:16","msg":"starting server ... ok"}
+{"level":"dev.info","ts":"[2024-09-14 11:35:59.291]","caller":"roadShow/main.go:27","msg":"当前计算机核数: 8个,调用：3个"}

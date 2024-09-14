@@ -47,8 +47,10 @@ func InitRouter() *gin.Engine {
 		MaxAge:           12 * time.Hour,
 	}))
 	// TODO 注册中间件
-
+	// 第一步 必要参数校验
 	r.Use(middleware.ValidityAPi())
+	// 第二步 签名校验
+	r.Use(middleware.Signature())
 
 	r.NoRoute(func(c *gin.Context) {
 		fmt.Println(112, c.Request.URL.Path)
